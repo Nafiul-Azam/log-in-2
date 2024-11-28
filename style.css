@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Bokor&family=Doto:wght@100..900&family=Fira+Code:wght@300..700&family=Lacquer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Stylish&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=UnifrakturMaguntia&display=swap");
+
+/* সাধারণ রিসেট - সব ইলিমেন্টের মার্জিন, প্যাডিং এবং বক্স সাইজিং রিসেট করা হচ্ছে */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* বডি স্টাইল */
+body {
+  display: flex; /* ফ্লেক্স বক্স ব্যবহার করে সেন্টারিং */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* পুরো ভিউপোর্টের উচ্চতা */
+  background: url("image5.jpg") no-repeat; /* সুন্দর গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins", sans-serif; /* ডিফল্ট ফন্ট */
+  color: #fff;
+}
+
+/* ওয়েবপৃষ্ঠার মূল কনটেইনার */
+.wrapper {
+  width: 420px;
+  background: transparent; /* গাঢ় বেগুনি ব্যাকগ্রাউন্ড */
+  color: #fff;
+  padding: 30px;
+  border: 0.5px solid rgba(266, 255, 255, 2);
+  border-radius: 15px; /* গোলাকার কোণা */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* হালকা শ্যাডো */
+  text-align: center; /* টেক্সট সেন্টার করা */
+  backdrop-filter: blur(20px);
+}
+
+/* হেডিং ১ (লোগিন টাইটেল) */
+.wrapper h1 {
+  font-family: "Protest Revolution", serif; /* বিশেষ ফন্ট */
+  font-size: 36px; /* বড় ফন্ট সাইজ */
+  margin-bottom: 10px;
+}
+
+/* সাবহেডিং (লগইন নির্দেশিকা) */
+.wrapper h2 {
+  font-family: "Allerta Stencil", sans-serif; /* নির্দিষ্ট ফন্ট */
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* সাবটাইটেল বা স্প্যান */
+.wrapper span {
+  font-family: "Bokor", serif;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 3.5px; /* অক্ষরের মধ্যে ফাঁকা */
+}
+
+/* ইনপুট বক্স */
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1); /* হালকা ব্যাকগ্রাউন্ড */
+  border: none; /* বর্ডার অপসারণ */
+  border-radius: 30px; /* গোলাকার কোণা */
+  color: #fff; /* টেক্সটের রঙ */
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* ফোকাস ট্রানজিশন */
+}
+
+/* ফোকাস করার সময় ইনপুট বক্সের স্টাইল */
+.input-box input:focus {
+  outline: none; /* আউটলাইন অপসারণ */
+  background: rgba(255, 255, 255, 0.2); /* ফোকাসের সময় ব্যাকগ্রাউন্ড পরিবর্তন */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* হালকা শ্যাডো */
+}
+
+/* প্লেসহোল্ডার স্টাইল */
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* প্লেসহোল্ডার রঙ */
+  font-style: italic;
+}
+
+/* ইনপুট বক্সের আইকন */
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%); /* সেন্টারে বসানো */
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7); /* হালকা আইকন রঙ */
+}
+
+/* বাটনের স্টাইল */
+.button {
+  width: 100%;
+  height: 50px;
+  background: #ff6347; /* উজ্জ্বল রঙ */
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* হোভার ট্রানজিশন */
+  margin-bottom: 10px; /* বাটন নিচে স্পেস */
+}
+
+/* হোভার করলে বাটনের রঙ এবং পজিশন পরিবর্তন */
+.button:hover {
+  background: #ff4500;
+  transform: translateY(-2px);
+}
+
+/* রেজিস্টার লিংক */
+.register-link {
+  margin-top: -20px; /* বাটনের নিচে কিছুটা দূরে রাখা */
+  font-size: 13px;
+  text-align: center;
+  font-family: "Fira Code", serif; /* নির্দিষ্ট ফন্ট */
+}
+
+/* রেজিস্টার লিংক টেক্সট */
+.register-link a {
+  color: #fff;
+  text-decoration: none; /* আন্ডারলাইন সরানো */
+  font-family: "Stylish", serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* রেজিস্টার লিংক হোভার */
+.register-link a:hover {
+  text-decoration: underline; /* হোভার করলে আন্ডারলাইন দেখাবে */
+}
+
+/* রিমেম্বার ফরগট লিংক */
+.remember-forgot a {
+  color: #fff;
+  padding-left: 18.8%;
+  text-decoration: none;
+}
+
+/* হোভার করলে রিমেম্বার ফরগট লিংক আন্ডারলাইন হবে */
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* লগইন বাটন */
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 18px; /* বড় ফন্ট সাইজ */
+  color: #333; /* টেক্সট কালো */
+  font-weight: 600; /* স্লোগান টেক্সটের স্টাইল */
+  margin-bottom: 20px; /* বাটনের নিচে স্পেস */
+  box-shadow: none; /* বক্স শ্যাডো অপসারণ */
+  position: relative;
+  margin-top: 20px;
+}
+.register-link span {
+  font-size: 16px;
+  font-family: "Titillium Web", serif;
+}
+.wrapper h2 {
+  font-size: 20px;
+  font-family: "Titillium Web", serif;
+}
